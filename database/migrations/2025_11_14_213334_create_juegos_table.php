@@ -13,6 +13,18 @@ return new class extends Migration
     {
         Schema::create('juegos', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->decimal('rating', 5, 2)->nullable();
+            $table->decimal('price_original', 10, 2);
+            $table->decimal('price_current', 10, 2);
+            $table->decimal('discount_percent', 5, 2)->default(0);
+            $table->integer('days_until_sale')->nullable();
+            $table->string('genre')->nullable();
+            $table->integer('reviews_count')->nullable();
+            $table->enum('player_trend', ['growing', 'falling', 'stable'])->nullable();
+            $table->boolean('will_be_discounted')->default(false);
+            $table->string('image_url')->nullable();
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }
