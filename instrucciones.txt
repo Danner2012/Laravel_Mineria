@@ -1,0 +1,25 @@
+PIKACHU
+
+la plantilla de react lo migre a lo antiguo, HTML-CSS-JS
+la vista del dashboard esta en "resources/views/dashboard.blade.php"
+sus assets CSS -JS estan en public/css/dashboard.css — estilos CSS del dashboard 
+y public/js/dashboard-config.js — configuración de Tailwind CSS
+
+la ruta esta en: "routes/web.php" con nombre dashboard accesible en /dashboard.
+
+Puedes acceder al dashboard en:
+URL: http://127.0.0.1:8000/dashboard/
+
+como se migro de react al formato antiguo las secciones de los botones es a la antigua
+replicar codigo HTML y compañia, pero mejor que te crees un layout si quieres mas orden
+como enseño el Ing. Crispin
+
+
+PARA CLONAR EN TU PETA ABRES laragon/www y ejecutas:
+git clone https://github.com/IgnacioZDev7/steam-games-app.git
+
+esta divido en ramas si lo quieres trabajar ahi
+Rama Main principal (limpio)
+Rama develop (limpio)
+Rama dashboard (aqui esta todo el proyecto funcional)
+

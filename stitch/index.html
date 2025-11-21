@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Game Store - Admin Dashboard</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/styles.css"/>
+  
+  <!-- Tailwind Configuration -->
+  <script src="js/config.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="flex w-64 flex-col bg-background-dark p-4 border-r border-surface-dark/50">
+      <div class="flex items-center gap-3 mb-8 px-2">
+        <div class="size-8 text-primary bg-white rounded-md p-1">
+          <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <h1 class="text-white text-lg font-bold">GAMESTORE</h1>
+          <p class="text-text-secondary text-xs">Admin Panel</p>
+        </div>
+      </div>
+      
+      <div class="flex flex-1 flex-col justify-between">
+        <div class="flex flex-col gap-2">
+          <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-surface-dark text-white shadow-[0_0_15px_-5px] shadow-primary/50 border border-primary" href="#">
+            <span class="material-symbols-outlined text-primary">dashboard</span>
+            <p class="text-sm font-medium leading-normal">Dashboard</p>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-dark/50 text-text-secondary hover:text-white transition-colors duration-200" href="#">
+            <span class="material-symbols-outlined">sports_esports</span>
+            <p class="text-sm font-medium leading-normal">Juegos</p>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-dark/50 text-text-secondary hover:text-white transition-colors duration-200" href="#">
+            <span class="material-symbols-outlined">sell</span>
+            <p class="text-sm font-medium leading-normal">Descuentos</p>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-dark/50 text-text-secondary hover:text-white transition-colors duration-200" href="#">
+            <span class="material-symbols-outlined">notifications</span>
+            <p class="text-sm font-medium leading-normal">Notificaciones</p>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-dark/50 text-text-secondary hover:text-white transition-colors duration-200" href="#">
+            <span class="material-symbols-outlined">bar_chart_4_bars</span>
+            <p class="text-sm font-medium leading-normal">Reportes</p>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-dark/50 text-text-secondary hover:text-white transition-colors duration-200" href="#">
+            <span class="material-symbols-outlined">group</span>
+            <p class="text-sm font-medium leading-normal">Usuarios</p>
+          </a>
+        </div>
+        
+        <div class="flex flex-col gap-2 border-t border-surface-dark/50 pt-4">
+          <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-dark/50 text-text-secondary hover:text-white transition-colors duration-200" href="#">
+            <span class="material-symbols-outlined">settings</span>
+            <p class="text-sm font-medium leading-normal">Configuración</p>
+          </a>
+          <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-dark/50 text-text-secondary hover:text-white transition-colors duration-200" href="#">
+            <span class="material-symbols-outlined">logout</span>
+            <p class="text-sm font-medium leading-normal">Cerrar Sesión</p>
+          </a>
+        </div>
+      </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto p-8">
+      <div class="mb-8">
+        <h1 class="text-white text-3xl font-bold tracking-tight">DASHBOARD</h1>
+        <p class="text-text-secondary">Visión general de tu tienda de videojuegos</p>
+      </div>
+      
+      <div class="space-y-8">
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="flex items-center gap-4 rounded-lg p-6 bg-surface-dark border border-surface-dark/50">
+            <div class="p-3 bg-green-500/10 rounded-lg">
+              <span class="material-symbols-outlined text-green-400 text-3xl">attach_money</span>
+            </div>
+            <div>
+              <p class="text-text-secondary text-sm font-medium leading-normal">Ingresos Totales</p>
+              <p class="text-white tracking-light text-2xl font-bold leading-tight">$0</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4 rounded-lg p-6 bg-surface-dark border border-surface-dark/50">
+            <div class="p-3 bg-cyan-500/10 rounded-lg">
+              <span class="material-symbols-outlined text-cyan-400 text-3xl">shopping_cart</span>
+            </div>
+            <div>
+              <p class="text-text-secondary text-sm font-medium leading-normal">Órdenes Totales</p>
+              <p class="text-white tracking-light text-2xl font-bold leading-tight">0</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4 rounded-lg p-6 bg-surface-dark border border-surface-dark/50">
+            <div class="p-3 bg-purple-500/10 rounded-lg">
+              <span class="material-symbols-outlined text-purple-400 text-3xl">group</span>
+            </div>
+            <div>
+              <p class="text-text-secondary text-sm font-medium leading-normal">Usuarios Activos</p>
+              <p class="text-white tracking-light text-2xl font-bold leading-tight">0</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4 rounded-lg p-6 bg-surface-dark border border-surface-dark/50">
+            <div class="p-3 bg-orange-500/10 rounded-lg">
+              <span class="material-symbols-outlined text-orange-400 text-3xl">inventory_2</span>
+            </div>
+            <div>
+              <p class="text-text-secondary text-sm font-medium leading-normal">Juegos Disponibles</p>
+              <p class="text-white tracking-light text-2xl font-bold leading-tight">0</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Content Sections -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="flex flex-col gap-4 p-6 rounded-lg bg-surface-dark border border-surface-dark/50">
+            <h2 class="text-white text-xl font-bold">Órdenes Recientes</h2>
+            <div class="flex items-center justify-center h-48 text-text-secondary">
+              <p>No hay órdenes recientes</p>
+            </div>
+          </div>
+          
+          <div class="flex flex-col gap-4 p-6 rounded-lg bg-surface-dark border border-surface-dark/50">
+            <h2 class="text-white text-xl font-bold">Juegos Destacados</h2>
+            <div class="flex items-center justify-center h-48 text-text-secondary">
+              <p>No hay juegos disponibles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
