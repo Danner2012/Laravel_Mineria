@@ -9,8 +9,11 @@ class JuegosController extends Controller
 {
     public function index(Request $request)
     {
-        // Obtener nombres únicos de juegos
-        $nombresUnicos = Game::distinct()->pluck('name');
+        // Obtener nombres únicos de juegos, excluyendo Dota y Warframe
+        $nombresUnicos = Game::distinct()
+            ->where('name', 'not like', '%Dota%')
+            ->where('name', 'not like', '%Warframe%')
+            ->pluck('name');
         
         // Para cada nombre, obtener el ID del juego que tiene imagen o el primero
         $idsUnicos = [];
