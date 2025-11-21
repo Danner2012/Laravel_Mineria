@@ -21,5 +21,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Importar juegos del CSV
+        $this->call([
+            JuegosSeeder::class,
+        ]);
     }
 }

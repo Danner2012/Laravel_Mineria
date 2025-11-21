@@ -4,13 +4,23 @@ use Illuminate\Support\Facades\Route;
 
 // Controladores
 use App\Http\Controllers\DescuentosController;
-use App\Http\Controllers\DashboardIAController;   
+use App\Http\Controllers\DashboardIAController;
+use App\Http\Controllers\JuegosController;   
 
 // ============================
 // DASHBOARD PRINCIPAL
 // ============================
 Route::get('/', [DashboardIAController::class, 'index'])
     ->name('dashboard');
+
+// ============================
+// JUEGOS
+// ============================
+Route::get('/juegos', [JuegosController::class, 'index'])
+    ->name('juegos.index');
+
+Route::get('/juegos/{id}', [JuegosController::class, 'show'])
+    ->name('juegos.show');
 
 // ============================
 // DESCUENTOS (modelo antiguo)

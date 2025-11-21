@@ -41,7 +41,7 @@
             <p class="text-sm font-medium leading-normal">Dashboard</p>
           </a>
 
-          <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-dark/50 text-text-secondary hover:text-white transition-colors duration-200">
+          <a href="{{ route('juegos.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-dark/50 text-text-secondary hover:text-white transition-colors duration-200">
             <span class="material-symbols-outlined">sports_esports</span>
             <p class="text-sm font-medium leading-normal">Juegos</p>
           </a>
